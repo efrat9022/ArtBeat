@@ -1,0 +1,897 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "isAdmin": true
+    },
+    {
+      "id": "2",
+      "name": "Regular User",
+      "email": "user@example.com",
+      "password": "user123",
+      "isAdmin": false
+    },
+    {
+      "id": "3",
+      "name": "אפרת ווייס",
+      "email": "e@gmail.com",
+      "password": "Ee12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "4",
+      "name": "מיכל",
+      "email": "m@gmail.com",
+      "password": "Mm12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "5",
+      "name": "שרה",
+      "email": "s@gmail.com",
+      "password": "Ss12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "6",
+      "name": "יהונתן",
+      "email": "y@gmail.com",
+      "password": "Yy12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "7",
+      "name": "דניאל",
+      "email": "d@gmail.com",
+      "password": "Dd12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "8",
+      "name": "נועם",
+      "email": "n@gmail.com",
+      "password": "Nn12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "9",
+      "name": "תמר",
+      "email": "t@gmail.com",
+      "password": "Tt12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "10",
+      "name": "יואב",
+      "email": "yoav@gmail.com",
+      "password": "Yo12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "11",
+      "name": "ליאן",
+      "email": "lian@gmail.com",
+      "password": "Li12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "12",
+      "name": "אורי",
+      "email": "uri@gmail.com",
+      "password": "Ur12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "13",
+      "name": "מאיה",
+      "email": "maya@gmail.com",
+      "password": "Ma12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "14",
+      "name": "יובל",
+      "email": "yuval@gmail.com",
+      "password": "Yu12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "15",
+      "name": "איתן",
+      "email": "eitan@gmail.com",
+      "password": "Ei12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "16",
+      "name": "bati",
+      "email": "b@gmail.com",
+      "password": "Bb12345!",
+      "isAdmin": false
+    },
+    {
+      "id": "17",
+      "name": "libi",
+      "email": "l@gmail.com",
+      "password": "Ll12345!",
+      "isAdmin": false
+    },
+    {
+      "name": "kobi mor",
+      "email": "k@gmail.com",
+      "password": "Kk12345!",
+      "isAdmin": false,
+      "id": "18"
+    }
+  ],
+  "artworks": [
+    {
+      "id": "1",
+      "title": "Artwork 1",
+      "description": "Description for artwork 1",
+      "image": "https://www.galleryonline.co.il/uploaded_files/53c66c4a6a5d0bdc8f955e2fe718a6ad.jpeg",
+      "price": 100,
+      "category": "Painting",
+      "purchases": 1
+    },
+    {
+      "title": "Artwork 2-m",
+      "description": "Description for artwork 2",
+      "image": "https://ae01.alicdn.com/kf/Sdbc41bce45b447d0bbd5925b870cccc0g.jpg",
+      "price": 110,
+      "category": "Screen Print",
+      "id": "2",
+      "purchases": 0
+    },
+    {
+      "title": "Artwork 4..",
+      "description": "Description for artwork 4",
+      "image": "https://img.joomcdn.net/dab7dc0948157c80d40ef5a0c18e410700fa6d37_original.jpeg",
+      "price": 130,
+      "category": "Screen Print",
+      "id": "4",
+      "purchases": 0
+    },
+    {
+      "id": "5",
+      "title": "Artwork 5",
+      "description": "Description for artwork 5",
+      "image": "https://m.media-amazon.com/images/I/B1BHuMzvezS._UF1000,1000_QL80_.jpg",
+      "price": 140,
+      "category": "Collage",
+      "purchases": 4
+    },
+    {
+      "id": "6",
+      "title": "Artwork 6",
+      "description": "Description for artwork 6",
+      "image": "https://www.1of135.co.il/1of135.com/originals/1714634583_SM_NATURE_SERIES_01.png",
+      "price": 150,
+      "category": "Drawing",
+      "purchases": 5
+    },
+    {
+      "id": "7",
+      "title": "Artwork 7",
+      "description": "Description for artwork 7",
+      "image": "https://cdn.speedsize.com/08f13bab-482e-4f31-95ed-bb6fbfe2bd67/https://d3m9l0v76dty0.cloudfront.net/system/extImages/P9um7HYUzlNZDE4TlK0YSSl5HKZsF6yJ4faEPdbe/original/ecVKY28wq5IVXf8nn3iEpbazBfrHzWpB.webp",
+      "price": 160,
+      "category": "Photography",
+      "purchases": 6
+    },
+    {
+      "id": "8",
+      "title": "Artwork 8",
+      "description": "Description for artwork 8",
+      "image": "https://img.joomcdn.net/ed4a0f6f1d2dca04feb9a37ab19c68022ff0ea08_original.jpeg",
+      "price": 170,
+      "category": "Painting",
+      "purchases": 7
+    },
+    {
+      "id": "9",
+      "title": "Artwork 9",
+      "description": "Description for artwork 9",
+      "image": "https://www.greenart.co.il/wp-content/uploads/2018/02/20220116_094024N-Large.jpg",
+      "price": 180,
+      "category": "Sculpture",
+      "purchases": 8
+    },
+    {
+      "id": "10",
+      "title": "Artwork 10",
+      "description": "Description for artwork 10",
+      "image": "https://osh-art.co.il/wp-content/uploads/2023/06/DSC5173-650x650.jpg",
+      "price": 190,
+      "category": "Print",
+      "purchases": 10
+    },
+    {
+      "id": "11",
+      "title": "Artwork 11",
+      "description": "Description for artwork 11",
+      "image": "https://img.joomcdn.net/58d5534e7a4dab988e83623e860f4e8a3f20da3b_original.jpeg",
+      "price": 200,
+      "category": "Screen Print",
+      "purchases": 0
+    },
+    {
+      "id": "12",
+      "title": "Artwork 12",
+      "description": "Description for artwork 12",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15449575/show/1260536cd11a92230012d270eebfcde5.jpg",
+      "price": 210,
+      "category": "Collage",
+      "purchases": 2
+    },
+    {
+      "id": "13",
+      "title": "Artwork 13",
+      "description": "Description for artwork 13",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/169708/original/5ad9f9ad006fabf66ac87de98dab02a0.png",
+      "price": 220,
+      "category": "Drawing",
+      "purchases": 2
+    },
+    {
+      "id": "14",
+      "title": "Artwork 14",
+      "description": "Description for artwork 14",
+      "image": "https://www.chasinglenscapes.com/wp-content/media/2020/06/best-street-art-in-tel-aviv.jpg",
+      "price": 230,
+      "category": "Photography",
+      "purchases": 13
+    },
+    {
+      "id": "15",
+      "title": "Artwork 15",
+      "description": "Description for artwork 15",
+      "image": "https://nurit-granot.co.il/wp-content/uploads/2019/11/%D7%9E%D7%95%D7%A4%D7%A9%D7%98-%D7%A2%D7%9D-%D7%A4%D7%A8%D7%97%D7%99%D7%9D-%D7%90%D7%93%D7%95%D7%9E%D7%99%D7%9D.jpg",
+      "price": 240,
+      "category": "Painting",
+      "purchases": 4
+    },
+    {
+      "id": "16",
+      "title": "Artwork 16",
+      "description": "Description for artwork 16",
+      "image": "https://www.greenart.co.il/wp-content/uploads/2018/02/20200929_142928-Large.jpg",
+      "price": 250,
+      "category": "Sculpture",
+      "purchases": 5
+    },
+    {
+      "id": "17",
+      "title": "Artwork 17",
+      "description": "Description for artwork 17",
+      "image": "https://printstudio.co.il/wp-content/uploads/2024/03/%D7%A6%D7%99%D7%95%D7%A8-%D7%A7%D7%95-%D7%AA%D7%9E%D7%95%D7%A0%D7%94-%D7%9E%D7%99%D7%A0%D7%99%D7%9E%D7%9C%D7%99%D7%A1%D7%98%D7%99%D7%AA-%D7%A0%D7%95%D7%A8%D7%93%D7%99%D7%AA-768x768.jpg",
+      "price": 260,
+      "category": "Print",
+      "purchases": 6
+    },
+    {
+      "id": "18",
+      "title": "Artwork 18",
+      "description": "Description for artwork 18",
+      "image": "https://img.joomcdn.net/4cc37435d60c3f0c43d3617472e3af5c5f5a89e5_original.jpeg",
+      "price": 270,
+      "category": "Screen Print",
+      "purchases": 9
+    },
+    {
+      "id": "19",
+      "title": "Artwork 19",
+      "description": "Description for artwork 19",
+      "image": "https://www.hagitaz.com/wp-content/uploads/2018/06/Lance-Letscher-Collage-1024x823.jpg",
+      "price": 280,
+      "category": "Collage",
+      "purchases": 8
+    },
+    {
+      "id": "20",
+      "title": "Artwork 20",
+      "description": "Description for artwork 20",
+      "image": "https://metalart4home.co.il/wp-content/uploads/2022/11/Flower-Lilly-Black-d.png",
+      "price": 290,
+      "category": "Drawing",
+      "purchases": 9
+    },
+    {
+      "id": "21",
+      "title": "Artwork 21",
+      "description": "Description for artwork 21",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/169710/original/b9aafd33d09b3ca3fc2b879c954d449c.png",
+      "price": 300,
+      "category": "Photography",
+      "purchases": 1
+    },
+    {
+      "id": "22",
+      "title": "Artwork 22",
+      "description": "Description for artwork 22",
+      "image": "https://www.galleryonline.co.il/uploaded_files/ad33e25bfedf925ad0a1e41a795a5575.jpg",
+      "price": 310,
+      "category": "Painting",
+      "purchases": 1
+    },
+    {
+      "id": "23",
+      "title": "Artwork 23",
+      "description": "Description for artwork 23",
+      "image": "https://storage.googleapis.com/tama-static/images/Archipenko-A.width-880.jpegquality-75.jpg?Expires=1748220198&GoogleAccessId=tama-static-files-uploader%40tama-website.iam.gserviceaccount.com&Signature=vgD4GMwRmPM28xfFyVaMmhHy39Dx3W7uoULYMmrieRXeKCY08PZEPzykzI4jZwwpOrspqnRhc89mT39jLgAPym6UlZkjE9Sj%2Bs5n7v1LLV3wf4JmpwEQXfEs3DHNqNKML4B92jJLzQUhGiNWZjnTwqsTNU0whhyCgU5lCgvc3J0TQnFbiayq6Uwk0zvclENG1K%2BLAen0IWanvBAbXLYnp6dDOQGvBtN%2BfRzzT%2FSV5Ifv2fNsyh441Yx4ZcNWY71q5f%2BEEqPt0KzQUq5pu9IzdYiQQ2dSxugLP9U1pM%2FdxxLeoBhuyw%2B4k0a%2Fupj5B%2FhnLUhiNjSlGGARNVrQy28%2FBA%3D%3D",
+      "price": 320,
+      "category": "Sculpture",
+      "purchases": 2
+    },
+    {
+      "id": "24",
+      "title": "Artwork 24",
+      "description": "Description for artwork 24",
+      "image": "https://printstudio.co.il/wp-content/uploads/2024/04/%D7%AA%D7%9E%D7%95%D7%A0%D7%94-%D7%9E%D7%95%D7%A0%D7%95%D7%9B%D7%A8%D7%95%D7%9E%D7%98%D7%99%D7%AA-%D7%90%D7%91%D7%A1%D7%98%D7%A8%D7%A7%D7%98-%D7%A1%D7%92%D7%A0%D7%95%D7%9F-%D7%A0%D7%95%D7%A8%D7%93%D7%99-500x500.jpg",
+      "price": 330,
+      "category": "Print",
+      "purchases": 4
+    },
+    {
+      "id": "25",
+      "title": "Artwork 25",
+      "description": "Description for artwork 25",
+      "image": "https://artistim.co.il/wp-content/uploads/2025/02/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%9E%D7%A1%D7%9A-2024-04-18-190643.png",
+      "price": 340,
+      "category": "Screen Print",
+      "purchases": 4
+    },
+    {
+      "id": "26",
+      "title": "Artwork 26",
+      "description": "Description for artwork 26",
+      "image": "https://images.cdn-files-a.com/uploads/2231351/2000_5d1352e25863c.jpg",
+      "price": 350,
+      "category": "Collage",
+      "purchases": 7
+    },
+    {
+      "id": "27",
+      "title": "Artwork 27",
+      "description": "Description for artwork 27",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8M-RSjOZ44OXv38QRceHVMzNEZtWeuUBk-Q&s",
+      "price": 360,
+      "category": "Drawing",
+      "purchases": 6
+    },
+    {
+      "id": "28",
+      "title": "Artwork 28",
+      "description": "Description for artwork 28",
+      "image": "https://haraayonot.com/wp-content/uploads/2016/08/conceptual-art1.jpg",
+      "price": 370,
+      "category": "Photography",
+      "purchases": 7
+    },
+    {
+      "id": "29",
+      "title": "Artwork 29",
+      "description": "Description for artwork 29",
+      "image": "https://art2rent.co.il/wp-content/uploads/2023/12/Art2rent-%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA-%D7%9C%D7%9E%D7%A9%D7%A8%D7%93-%D7%9C%D7%91%D7%99%D7%AA-%D7%A6%D7%99%D7%95%D7%A8%D7%99%D7%9D-%D7%99%D7%A4%D7%99%D7%9D-%D7%A6%D7%99%D7%95%D7%A8%D7%99%D7%9D-%D7%9C%D7%92%D7%9C%D7%A8%D7%99%D7%94-%D7%90%D7%95%D7%9E%D7%A0%D7%95%D7%AA-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%AA-%D7%A6%D7%99%D7%95%D7%A8%D7%99%D7%9D-%D7%9C%D7%91%D7%99%D7%AA-%D7%A6%D7%99%D7%95%D7%A8%D7%99%D7%9D-%D7%9C%D7%9E%D7%A9%D7%A8%D7%93-1-1.jpg",
+      "price": 380,
+      "category": "Painting",
+      "purchases": 8
+    },
+    {
+      "id": "30",
+      "title": "Artwork 30",
+      "description": "Description for artwork 30",
+      "image": "https://www.bizmakebiz.co.il/Media/Blogs/0/2b86af9852.jpg",
+      "price": 390,
+      "category": "Sculpture",
+      "purchases": 9
+    },
+    {
+      "id": "31",
+      "title": "Artwork 31",
+      "description": "Description for artwork 31",
+      "image": "https://printstudio.co.il/wp-content/uploads/2024/02/1X1-2024-01-31T105206.260-768x768.jpg",
+      "price": 400,
+      "category": "Print",
+      "purchases": 0
+    },
+    {
+      "id": "32",
+      "title": "Artwork 32",
+      "description": "Description for artwork 32",
+      "image": "https://artistim.co.il/wp-content/uploads/2025/02/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%9E%D7%A1%D7%9A-2024-04-18-190643.png",
+      "price": 410,
+      "category": "Screen Print",
+      "purchases": 1
+    },
+    {
+      "id": "33",
+      "title": "Artwork 33",
+      "description": "Description for artwork 33",
+      "image": "https://m.media-amazon.com/images/I/61BOtW7l9jL._AC_UF894,1000_QL80_.jpg",
+      "price": 420,
+      "category": "Collage",
+      "purchases": 2
+    },
+    {
+      "id": "34",
+      "title": "Artwork 34",
+      "description": "Description for artwork 34",
+      "image": "https://www.galleryonline.co.il/uploaded_files/7c89c8b3fd8e083030fa13af58c85bfb.jpg",
+      "price": 430,
+      "category": "Drawing",
+      "purchases": 3
+    },
+    {
+      "id": "35",
+      "title": "Artwork 35",
+      "description": "Description for artwork 35",
+      "image": "https://hashook.co.il/wp-content/uploads/2020/12/Infinite-Perspective-Jake-Amazon-Jade-Amazon-Stephen-Kruse-1.jpg",
+      "price": 440,
+      "category": "Photography",
+      "purchases": 5
+    },
+    {
+      "id": "36",
+      "title": "Artwork 36",
+      "description": "Description for artwork 36",
+      "image": "https://static.wixstatic.com/media/358656_3019f0ad97ff49f0b9cf35e0697825e3~mv2.jpg/v1/fill/w_480,h_454,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/358656_3019f0ad97ff49f0b9cf35e0697825e3~mv2.jpg",
+      "price": 450,
+      "category": "Painting",
+      "purchases": 5
+    },
+    {
+      "id": "38",
+      "title": "Artwork 38",
+      "description": "Description for artwork 38",
+      "image": "https://printstudio.co.il/wp-content/uploads/2024/04/%D7%99%D7%A6%D7%99%D7%A8%D7%AA-%D7%90%D7%9E%D7%A0%D7%95%D7%AA-%D7%A6%D7%99%D7%95%D7%A8-%D7%A2%D7%9C%D7%99%D7%9D-%D7%9E%D7%95%D7%A0%D7%95%D7%9B%D7%A8%D7%95%D7%9E%D7%98%D7%99-1024x1024.jpg",
+      "price": 470,
+      "category": "Print",
+      "purchases": 7
+    },
+    {
+      "id": "39",
+      "title": "Artwork 39",
+      "description": "Description for artwork 39",
+      "image": "https://m.media-amazon.com/images/I/81myZZwfkdL._AC_UF894,1000_QL80_.jpg",
+      "price": 480,
+      "category": "Screen Print",
+      "purchases": 8
+    },
+    {
+      "id": "41",
+      "title": "Artwork 41",
+      "description": "Description for artwork 41",
+      "image": "https://haimmahatart.com/Cat_486103_116.webp",
+      "price": 500,
+      "category": "Drawing",
+      "purchases": 0
+    },
+    {
+      "id": "42",
+      "title": "Artwork 42",
+      "description": "Description for artwork 42",
+      "image": "https://haraayonot.com/wp-content/uploads/2016/08/47729178_m.jpg",
+      "price": 510,
+      "category": "Photography",
+      "purchases": 1
+    },
+    {
+      "id": "43",
+      "title": "Artwork 43",
+      "description": "Description for artwork 43",
+      "image": "https://img.joomcdn.net/ed4a0f6f1d2dca04feb9a37ab19c68022ff0ea08_original.jpeg",
+      "price": 520,
+      "category": "Painting",
+      "purchases": 2
+    },
+    {
+      "id": "44",
+      "title": "Artwork 44",
+      "description": "Description for artwork 44",
+      "image": "https://www.greenart.co.il/wp-content/uploads/2018/02/dsc_8200-large.jpg",
+      "price": 530,
+      "category": "Sculpture",
+      "purchases": 3
+    },
+    {
+      "id": "45",
+      "title": "Artwork 45",
+      "description": "Description for artwork 45",
+      "image": "https://printstudio.co.il/wp-content/uploads/2024/04/%D7%A4%D7%95%D7%A1%D7%98%D7%A8-%D7%A7%D7%95-%D7%90%D7%97%D7%93-%D7%A4%D7%A0%D7%99%D7%9D-%D7%90%D7%99%D7%A9%D7%94-%D7%A9%D7%97%D7%95%D7%A8-%D7%9C%D7%91%D7%9F-scaled.jpg",
+      "price": 540,
+      "category": "Print",
+      "purchases": 4
+    },
+    {
+      "title": "יצירה חדשה",
+      "description": "ניסוי",
+      "image": "https://printstudio.co.il/wp-content/uploads/2024/04/%D7%AA%D7%9E%D7%95%D7%A0%D7%94-%D7%A0%D7%95%D7%A8%D7%93%D7%99%D7%AA-%D7%A7%D7%95-%D7%90%D7%97%D7%93-%D7%9E%D7%95%D7%A0%D7%95%D7%9B%D7%A8%D7%95%D7%9E%D7%98%D7%99%D7%AA-1024x1024.jpg",
+      "price": 350,
+      "category": "Print",
+      "id": "46",
+      "purchases": 0
+    },
+    {
+      "title": "ציור יד אומנותי",
+      "description": "דיו מסך מותאם אישית בגווני צבע קייציים",
+      "image": "http://il.yrsilicone.com/uploads/202133074/45453073600.jpg",
+      "price": 390,
+      "category": "Drawing",
+      "id": "47",
+      "purchases": 0
+    }
+  ],
+  "reviews": [
+    {
+      "artworkId": 7,
+      "userId": 3,
+      "userName": "אפרת ווייס",
+      "rating": 3,
+      "comment": "עבודה יפה\nמוסיף לבית",
+      "date": "2025-05-24",
+      "id": "lCBfKKu"
+    },
+    {
+      "artworkId": 1,
+      "userId": 16,
+      "userName": "bati",
+      "rating": 4,
+      "comment": "Amazing!!!\nwwwoooowwww",
+      "date": "2025-05-24",
+      "id": "k1JEZm_"
+    },
+    {
+      "artworkId": 4,
+      "userId": 17,
+      "userName": "libi",
+      "rating": 1,
+      "comment": "SO NICE BUT NOT MATCH COLOR",
+      "date": "2025-05-24",
+      "id": "RZxBtfi"
+    }
+  ],
+  "orders": [
+    {
+      "userId": 3,
+      "items": [
+        {
+          "title": "Artwork 2-m",
+          "description": "Description for artwork 2",
+          "image": "https://ae01.alicdn.com/kf/Sdbc41bce45b447d0bbd5925b870cccc0g.jpg",
+          "price": 110,
+          "category": "Screen Print",
+          "id": 2,
+          "quantity": 1
+        },
+        {
+          "id": 24,
+          "title": "Artwork 24",
+          "description": "Description for artwork 24",
+          "image": "https://printstudio.co.il/wp-content/uploads/2024/04/%D7%AA%D7%9E%D7%95%D7%A0%D7%94-%D7%9E%D7%95%D7%A0%D7%95%D7%9B%D7%A8%D7%95%D7%9E%D7%98%D7%99%D7%AA-%D7%90%D7%91%D7%A1%D7%98%D7%A8%D7%A7%D7%98-%D7%A1%D7%92%D7%A0%D7%95%D7%9F-%D7%A0%D7%95%D7%A8%D7%93%D7%99-500x500.jpg",
+          "price": 330,
+          "category": "Print",
+          "purchases": 3,
+          "quantity": 2
+        }
+      ],
+      "total": 770,
+      "date": "2025-05-25T00:07:27.818Z",
+      "id": "1"
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "title": "Artwork 4..",
+          "description": "Description for artwork 4",
+          "image": "https://img.joomcdn.net/dab7dc0948157c80d40ef5a0c18e410700fa6d37_original.jpeg",
+          "price": 130,
+          "category": "Screen Print",
+          "id": 4,
+          "quantity": 2
+        },
+        {
+          "id": 23,
+          "title": "Artwork 23",
+          "description": "Description for artwork 23",
+          "image": "https://storage.googleapis.com/tama-static/images/Archipenko-A.width-880.jpegquality-75.jpg?Expires=1748220198&GoogleAccessId=tama-static-files-uploader%40tama-website.iam.gserviceaccount.com&Signature=vgD4GMwRmPM28xfFyVaMmhHy39Dx3W7uoULYMmrieRXeKCY08PZEPzykzI4jZwwpOrspqnRhc89mT39jLgAPym6UlZkjE9Sj%2Bs5n7v1LLV3wf4JmpwEQXfEs3DHNqNKML4B92jJLzQUhGiNWZjnTwqsTNU0whhyCgU5lCgvc3J0TQnFbiayq6Uwk0zvclENG1K%2BLAen0IWanvBAbXLYnp6dDOQGvBtN%2BfRzzT%2FSV5Ifv2fNsyh441Yx4ZcNWY71q5f%2BEEqPt0KzQUq5pu9IzdYiQQ2dSxugLP9U1pM%2FdxxLeoBhuyw%2B4k0a%2Fupj5B%2FhnLUhiNjSlGGARNVrQy28%2FBA%3D%3D",
+          "price": 320,
+          "category": "Sculpture",
+          "purchases": 2,
+          "quantity": 2
+        },
+        {
+          "id": 22,
+          "title": "Artwork 22",
+          "description": "Description for artwork 22",
+          "image": "https://www.galleryonline.co.il/uploaded_files/ad33e25bfedf925ad0a1e41a795a5575.jpg",
+          "price": 310,
+          "category": "Painting",
+          "purchases": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 1210,
+      "date": "2025-05-25T00:12:53.109Z",
+      "id": "2"
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "id": 1,
+          "title": "Artwork 1",
+          "description": "Description for artwork 1",
+          "image": "https://www.galleryonline.co.il/uploaded_files/53c66c4a6a5d0bdc8f955e2fe718a6ad.jpeg",
+          "price": 100,
+          "category": "Painting",
+          "purchases": 0,
+          "quantity": 1
+        },
+        {
+          "id": 21,
+          "title": "Artwork 21",
+          "description": "Description for artwork 21",
+          "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/169710/original/b9aafd33d09b3ca3fc2b879c954d449c.png",
+          "price": 300,
+          "category": "Photography",
+          "purchases": 0,
+          "quantity": 1
+        },
+        {
+          "id": 14,
+          "title": "Artwork 14",
+          "description": "Description for artwork 14",
+          "image": "https://www.chasinglenscapes.com/wp-content/media/2020/06/best-street-art-in-tel-aviv.jpg",
+          "price": 230,
+          "category": "Photography",
+          "purchases": 3,
+          "quantity": 1
+        }
+      ],
+      "total": 630,
+      "date": "2025-05-25T00:21:53.080Z",
+      "id": "3"
+    },
+    {
+      "id": "c40d",
+      "userId": "3",
+      "items": [
+        {
+          "id": "11",
+          "title": "Artwork 11",
+          "description": "Description for artwork 11",
+          "image": "https://img.joomcdn.net/58d5534e7a4dab988e83623e860f4e8a3f20da3b_original.jpeg",
+          "price": 200,
+          "category": "Screen Print",
+          "purchases": 0,
+          "quantity": 1
+        }
+      ],
+      "total": 200,
+      "date": "2025-06-03T13:58:27.048Z"
+    },
+    {
+      "id": "7490",
+      "userId": "3",
+      "items": [
+        {
+          "id": "15",
+          "title": "Artwork 15",
+          "description": "Description for artwork 15",
+          "image": "https://nurit-granot.co.il/wp-content/uploads/2019/11/%D7%9E%D7%95%D7%A4%D7%A9%D7%98-%D7%A2%D7%9D-%D7%A4%D7%A8%D7%97%D7%99%D7%9D-%D7%90%D7%93%D7%95%D7%9E%D7%99%D7%9D.jpg",
+          "price": 240,
+          "category": "Painting",
+          "purchases": 4,
+          "quantity": 1
+        }
+      ],
+      "total": 240,
+      "date": "2025-06-03T13:59:10.516Z"
+    },
+    {
+      "userId": "3",
+      "items": [
+        {
+          "id": "11",
+          "title": "Artwork 11",
+          "description": "Description for artwork 11",
+          "image": "https://img.joomcdn.net/58d5534e7a4dab988e83623e860f4e8a3f20da3b_original.jpeg",
+          "price": 200,
+          "category": "Screen Print",
+          "purchases": 0,
+          "quantity": 1
+        }
+      ],
+      "total": 200,
+      "date": "2025-06-03T14:07:12.293Z",
+      "id": "Qc2vH7R"
+    },
+    {
+      "userId": "3",
+      "items": [
+        {
+          "id": "10",
+          "title": "Artwork 10",
+          "description": "Description for artwork 10",
+          "image": "https://osh-art.co.il/wp-content/uploads/2023/06/DSC5173-650x650.jpg",
+          "price": 190,
+          "category": "Print",
+          "purchases": 9,
+          "quantity": 1
+        }
+      ],
+      "total": 190,
+      "date": "2025-06-03T14:11:48.590Z",
+      "id": "wPV7_cV"
+    },
+    {
+      "id": "7306",
+      "userId": "16",
+      "items": [
+        {
+          "id": "10",
+          "title": "Artwork 10",
+          "description": "Description for artwork 10",
+          "image": "https://osh-art.co.il/wp-content/uploads/2023/06/DSC5173-650x650.jpg",
+          "price": 190,
+          "category": "Print",
+          "purchases": 9,
+          "quantity": 1
+        }
+      ],
+      "total": 190,
+      "date": "2025-06-03T14:14:37.148Z"
+    },
+    {
+      "id": "27d4",
+      "userId": "16",
+      "items": [
+        {
+          "id": "1",
+          "title": "Artwork 1",
+          "description": "Description for artwork 1",
+          "image": "https://www.galleryonline.co.il/uploaded_files/53c66c4a6a5d0bdc8f955e2fe718a6ad.jpeg",
+          "price": 100,
+          "category": "Painting",
+          "purchases": 0,
+          "quantity": 1
+        }
+      ],
+      "total": 100,
+      "date": "2025-06-03T14:16:52.272Z"
+    },
+    {
+      "userId": "16",
+      "items": [
+        {
+          "id": "1",
+          "title": "Artwork 1",
+          "description": "Description for artwork 1",
+          "image": "https://www.galleryonline.co.il/uploaded_files/53c66c4a6a5d0bdc8f955e2fe718a6ad.jpeg",
+          "price": 100,
+          "category": "Painting",
+          "purchases": 0,
+          "quantity": 1
+        }
+      ],
+      "total": 100,
+      "date": "2025-06-03T14:38:35.159Z",
+      "id": "lVEtHbn"
+    },
+    {
+      "userId": "16",
+      "items": [
+        {
+          "id": "24",
+          "title": "Artwork 24",
+          "description": "Description for artwork 24",
+          "image": "https://printstudio.co.il/wp-content/uploads/2024/04/%D7%AA%D7%9E%D7%95%D7%A0%D7%94-%D7%9E%D7%95%D7%A0%D7%95%D7%9B%D7%A8%D7%95%D7%9E%D7%98%D7%99%D7%AA-%D7%90%D7%91%D7%A1%D7%98%D7%A8%D7%A7%D7%98-%D7%A1%D7%92%D7%A0%D7%95%D7%9F-%D7%A0%D7%95%D7%A8%D7%93%D7%99-500x500.jpg",
+          "price": 330,
+          "category": "Print",
+          "purchases": 3,
+          "quantity": 1
+        }
+      ],
+      "total": 330,
+      "date": "2025-06-03T14:39:02.509Z",
+      "id": "MSv70Hw"
+    },
+    {
+      "userId": "16",
+      "items": [
+        {
+          "id": "18",
+          "title": "Artwork 18",
+          "description": "Description for artwork 18",
+          "image": "https://img.joomcdn.net/4cc37435d60c3f0c43d3617472e3af5c5f5a89e5_original.jpeg",
+          "price": 270,
+          "category": "Screen Print",
+          "purchases": 7,
+          "quantity": 2
+        }
+      ],
+      "total": 540,
+      "date": "2025-06-03T14:39:29.411Z",
+      "id": "3R3ET57"
+    },
+    {
+      "userId": "16",
+      "items": [
+        {
+          "id": "26",
+          "title": "Artwork 26",
+          "description": "Description for artwork 26",
+          "image": "https://images.cdn-files-a.com/uploads/2231351/2000_5d1352e25863c.jpg",
+          "price": 350,
+          "category": "Collage",
+          "purchases": 5,
+          "quantity": 2
+        }
+      ],
+      "total": 700,
+      "date": "2025-06-03T14:39:45.762Z",
+      "id": "vxWgTho"
+    },
+    {
+      "userId": "3",
+      "items": [
+        {
+          "id": "21",
+          "title": "Artwork 21",
+          "description": "Description for artwork 21",
+          "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/169710/original/b9aafd33d09b3ca3fc2b879c954d449c.png",
+          "price": 300,
+          "category": "Photography",
+          "purchases": 0,
+          "quantity": 1
+        },
+        {
+          "id": "35",
+          "title": "Artwork 35",
+          "description": "Description for artwork 35",
+          "image": "https://hashook.co.il/wp-content/uploads/2020/12/Infinite-Perspective-Jake-Amazon-Jade-Amazon-Stephen-Kruse-1.jpg",
+          "price": 440,
+          "category": "Photography",
+          "purchases": 4,
+          "quantity": 1
+        }
+      ],
+      "total": 740,
+      "date": "2025-06-03T16:28:50.759Z",
+      "id": "Y_rmUCq"
+    },
+    {
+      "userId": "3",
+      "items": [
+        {
+          "id": "10",
+          "title": "Artwork 10",
+          "description": "Description for artwork 10",
+          "image": "https://osh-art.co.il/wp-content/uploads/2023/06/DSC5173-650x650.jpg",
+          "price": 190,
+          "category": "Print",
+          "purchases": 9,
+          "quantity": 1
+        },
+        {
+          "id": "12",
+          "title": "Artwork 12",
+          "description": "Description for artwork 12",
+          "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15449575/show/1260536cd11a92230012d270eebfcde5.jpg",
+          "price": 210,
+          "category": "Collage",
+          "purchases": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 400,
+      "date": "2025-06-08T19:40:35.586Z",
+      "id": "ABdIPBn"
+    }
+  ]
+}
