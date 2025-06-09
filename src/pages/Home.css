@@ -1,0 +1,16 @@
+.title-section .logo-img {
+  height: 100px;
+  object-fit: contain;
+}
+
+.main-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #7d2d2d;
+}
+
+.my-line {
+  border-top: 2px solid #aaa;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
