@@ -2,7 +2,6 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-import { TextField, Button, Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setMessage } from '../redux/slices/messageSlice';
@@ -50,45 +49,57 @@ const Register = () => {
   });
 
   return (
-    <Box sx={{ maxWidth: 400, mx: 'auto', mt: 4 }}>
-      <Typography variant="h5" gutterBottom>הרשמה</Typography>
-      <form onSubmit={formik.handleSubmit}>
-        <TextField
-          fullWidth
-          margin="normal"
-          label="שם"
-          name="name"
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          error={formik.touched.name && Boolean(formik.errors.name)}
-          helperText={formik.touched.name && formik.errors.name}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="אימייל"
-          name="email"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="סיסמה"
-          type="password"
-          name="password"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-          error={formik.touched.password && Boolean(formik.errors.password)}
-          helperText={formik.touched.password && formik.errors.password}
-        />
-        <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 }}>
-          הירשם
-        </Button>
+    <div className="container" dir="rtl" style={{ maxWidth: '400px', paddingTop: '100px' }}>
+      <h2 className="text-center mb-4">הרשמה</h2>
+      <form onSubmit={formik.handleSubmit} className="border rounded p-4 shadow-sm bg-light">
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">שם</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            className={`form-control ${formik.touched.name && formik.errors.name ? 'is-invalid' : ''}`}
+            value={formik.values.name}
+            onChange={formik.handleChange}
+          />
+          {formik.touched.name && formik.errors.name && (
+            <div className="invalid-feedback">{formik.errors.name}</div>
+          )}
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">אימייל</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            className={`form-control ${formik.touched.email && formik.errors.email ? 'is-invalid' : ''}`}
+            value={formik.values.email}
+            onChange={formik.handleChange}
+          />
+          {formik.touched.email && formik.errors.email && (
+            <div className="invalid-feedback">{formik.errors.email}</div>
+          )}
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">סיסמה</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            className={`form-control ${formik.touched.password && formik.errors.password ? 'is-invalid' : ''}`}
+            value={formik.values.password}
+            onChange={formik.handleChange}
+          />
+          {formik.touched.password && formik.errors.password && (
+            <div className="invalid-feedback">{formik.errors.password}</div>
+          )}
+        </div>
+
+        <button type="submit" className="btn btn-dark w-100 mt-2">הירשם</button>
       </form>
-    </Box>
+    </div>
   );
 };
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -7,7 +6,8 @@ import {
   Button,
   Box,
   Typography,
-  MenuItem
+  MenuItem,
+  Paper
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -50,49 +50,89 @@ const AdminCreateArtwork = () => {
   });
 
   return (
-    <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4 }}>
-      <Typography variant="h5" gutterBottom>הוספת יצירה חדשה</Typography>
-      <form onSubmit={formik.handleSubmit}>
-        <TextField
-          fullWidth
-          margin="normal"
-          label="שם"
-          {...formik.getFieldProps('title')}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="תיאור"
-          {...formik.getFieldProps('description')}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="תמונה (URL)"
-          {...formik.getFieldProps('image')}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="מחיר"
-          type="number"
-          {...formik.getFieldProps('price')}
-        />
-        <TextField
-          select
-          fullWidth
-          margin="normal"
-          label="קטגוריה"
-          {...formik.getFieldProps('category')}
+    <Box sx={{ mt: 12, display: 'flex', justifyContent: 'center', px: 2 }}>
+      <Paper
+        elevation={6}
+        sx={{
+          p: 3,
+          width: '100%',
+          maxWidth: 340,
+          bgcolor: '#fafafa',
+          border: '1px solid #ccc',
+          borderRadius: 2,
+          boxShadow: '0 8px 18px rgba(0,0,0,0.1)'
+        }}
+      >
+        <Typography
+          variant="h6"
+          gutterBottom
+          sx={{ mb: 2, fontWeight: 600, color: '#111', textAlign: 'center' }}
         >
-          {categories.map((cat) => (
-            <MenuItem key={cat} value={cat}>{cat}</MenuItem>
-          ))}
-        </TextField>
-        <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 }}>
-          הוספה
-        </Button>
-      </form>
+          הוספת יצירה חדשה
+        </Typography>
+
+        <form onSubmit={formik.handleSubmit}>
+          <TextField
+            fullWidth
+            margin="dense"
+            label="שם"
+            size="small"
+            {...formik.getFieldProps('title')}
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label="תיאור"
+            multiline
+            rows={2}
+            size="small"
+            {...formik.getFieldProps('description')}
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label="תמונה (URL)"
+            size="small"
+            {...formik.getFieldProps('image')}
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label="מחיר"
+            type="number"
+            size="small"
+            {...formik.getFieldProps('price')}
+          />
+          <TextField
+            select
+            fullWidth
+            margin="dense"
+            label="קטגוריה"
+            size="small"
+            {...formik.getFieldProps('category')}
+          >
+            {categories.map((cat) => (
+              <MenuItem key={cat} value={cat}>{cat}</MenuItem>
+            ))}
+          </TextField>
+
+          <Button
+            type="submit"
+            variant="contained"
+            fullWidth
+            sx={{
+              mt: 2,
+              py: 1,
+              fontWeight: 500,
+              backgroundColor: '#000',
+              color: '#fff',
+              '&:hover': { backgroundColor: '#222' }
+            }}
+          >
+            הוספה
+          </Button>
+        </form>
+      </Paper>
     </Box>
   );
 };

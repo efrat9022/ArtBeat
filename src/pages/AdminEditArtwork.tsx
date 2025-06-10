@@ -8,7 +8,8 @@ import {
   TextField,
   Button,
   Typography,
-  MenuItem
+  MenuItem,
+  Paper
 } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { setMessage } from '../redux/slices/messageSlice';
@@ -71,54 +72,95 @@ const AdminEditArtwork = () => {
   });
 
   return (
-    <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4 }}>
-      <Typography variant="h5" gutterBottom>עריכת יצירה</Typography>
-      <form onSubmit={formik.handleSubmit}>
-        <TextField
-          fullWidth
-          margin="normal"
-          label="שם"
-          {...formik.getFieldProps('title')}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="תיאור"
-          {...formik.getFieldProps('description')}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="תמונה (URL)"
-          {...formik.getFieldProps('image')}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          label="מחיר"
-          type="number"
-          {...formik.getFieldProps('price')}
-        />
-        <TextField
-          select
-          fullWidth
-          margin="normal"
-          label="קטגוריה"
-          {...formik.getFieldProps('category')}
+    <Box sx={{ mt: 12, display: 'flex', justifyContent: 'center', px: 2 }}>
+      <Paper
+        elevation={6}
+        sx={{
+          p: 3,
+          width: '100%',
+          maxWidth: 340,
+          bgcolor: '#fafafa',
+          border: '1px solid #ccc',
+          borderRadius: 2,
+          boxShadow: '0 8px 18px rgba(0,0,0,0.1)'
+        }}
+      >
+        <Typography
+          variant="h6"
+          gutterBottom
+          sx={{ mb: 2, fontWeight: 600, color: '#111', textAlign: 'center' }}
         >
-          {categories.map((cat) => (
-            <MenuItem key={cat} value={cat}>{cat}</MenuItem>
-          ))}
-        </TextField>
-        <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 }}>
-          שמור שינויים
-        </Button>
-      </form>
+          עריכת יצירה
+        </Typography>
+
+        <form onSubmit={formik.handleSubmit}>
+          <TextField
+            fullWidth
+            margin="dense"
+            label="שם"
+            size="small"
+            {...formik.getFieldProps('title')}
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label="תיאור"
+            multiline
+            rows={2}
+            size="small"
+            {...formik.getFieldProps('description')}
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label="תמונה (URL)"
+            size="small"
+            {...formik.getFieldProps('image')}
+          />
+          <TextField
+            fullWidth
+            margin="dense"
+            label="מחיר"
+            type="number"
+            size="small"
+            {...formik.getFieldProps('price')}
+          />
+          <TextField
+            select
+            fullWidth
+            margin="dense"
+            label="קטגוריה"
+            size="small"
+            {...formik.getFieldProps('category')}
+          >
+            {categories.map((cat) => (
+              <MenuItem key={cat} value={cat}>{cat}</MenuItem>
+            ))}
+          </TextField>
+
+          <Button
+            type="submit"
+            variant="contained"
+            fullWidth
+            sx={{
+              mt: 2,
+              py: 1,
+              fontWeight: 500,
+              backgroundColor: '#000',
+              color: '#fff',
+              '&:hover': { backgroundColor: '#222' }
+            }}
+          >
+            שמור שינויים
+          </Button>
+        </form>
+      </Paper>
     </Box>
   );
 };
 
 export default AdminEditArtwork;
 
-// ✅ פותר את שגיאת TS1208
-export {};
+
+
+

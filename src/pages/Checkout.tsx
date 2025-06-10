@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/store';
-import { Box, Typography, Button } from '@mui/material';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { clearCart } from '../redux/slices/cartSlice';
+import axios from 'axios';
 
 const Checkout = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
@@ -21,30 +20,26 @@ const Checkout = () => {
     }
 
     try {
-      // 1. עדכון כמות קניות עבור כל פריט
       for (const item of cartItems) {
-        const numericId = Number(item.id);
-        const res = await axios.get(`http://localhost:4000/artworks/${numericId}`);
+        const res = await axios.get(`http://localhost:4000/artworks/${item.id}`);
         const updatedArtwork = {
           ...res.data,
           purchases: (res.data.purchases || 0) + item.quantity
         };
-        await axios.put(`http://localhost:4000/artworks/${numericId}`, updatedArtwork);
+        await axios.put(`http://localhost:4000/artworks/${item.id}`, updatedArtwork);
       }
 
-      // 2. שליחת הזמנה לשרת
       const order = {
         userId: user.id,
         items: cartItems,
         total,
         date: new Date().toISOString()
       };
+
       await axios.post('http://localhost:4000/orders', order);
 
-      // 3. ניקוי עגלה וניווט
       dispatch(clearCart());
       navigate('/thankyou');
-
     } catch (err) {
       console.error('שגיאה בביצוע ההזמנה:', err);
       alert('שגיאה בביצוע ההזמנה');
@@ -52,24 +47,47 @@ const Checkout = () => {
   };
 
   return (
-    <Box sx={{ p: 3 }}>
-      <Typography variant="h4" gutterBottom>סיכום הזמנה</Typography>
+    <div className="container d-flex justify-content-center mt-5 pt-5" dir="rtl">
+      <div className="card shadow p-4" style={{ maxWidth: '500px', width: '100%' }}>
+        <h4 className="fw-bold mb-4 text-center">סיכום ההזמנה</h4>
 
-      {cartItems.map((item) => (
-        <Box key={item.id} sx={{ mb: 2 }}>
-          <Typography>
-            {item.title} - כמות: {item.quantity} - ₪{item.price * item.quantity}
-          </Typography>
-        </Box>
-      ))}
+        {cartItems.length === 0 ? (
+          <p className="text-center">העגלה שלך ריקה</p>
+        ) : (
+          <>
+            <ul className="list-group mb-4">
+              {cartItems.map((item) => (
+                <li
+                  key={item.id}
+                  className="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <div className="fw-bold">{item.title}</div>
+                    <small className="text-muted">
+                      כמות: {item.quantity} | ₪{item.price} ליחידה
+                    </small>
+                  </div>
+                  <span className="fw-bold">₪{item.price * item.quantity}</span>
+                </li>
+              ))}
+            </ul>
 
-      <Typography variant="h6">סה"כ לתשלום: ₪{total}</Typography>
+            <div className="border-top pt-3 text-end">
+              <h5 className="fw-bold">סה"כ לתשלום: ₪{total}</h5>
+            </div>
 
-      <Button variant="contained" sx={{ mt: 2 }} onClick={handlePlaceOrder}>
-        סיום רכישה
-      </Button>
-    </Box>
+            <button
+              className="btn btn-dark w-100 mt-3"
+              onClick={handlePlaceOrder}
+            >
+              סיום רכישה
+            </button>
+          </>
+        )}
+      </div>
+    </div>
   );
 };
 
 export default Checkout;
+

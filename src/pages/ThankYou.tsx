@@ -1,20 +1,20 @@
-// src/pages/ThankYou.tsx
-
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const ThankYou = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ p: 3, textAlign: 'center' }}>
-      <Typography variant="h4" gutterBottom>תודה על הרכישה!</Typography>
-      <Typography>ההזמנה התקבלה בהצלחה</Typography>
-      <Button variant="contained" sx={{ mt: 3 }} onClick={() => navigate('/')}>
-        חזרה לעמוד הבית
-      </Button>
-    </Box>
+    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: '80vh' }} dir="rtl">
+      <div className="card shadow text-center p-5" style={{ maxWidth: '500px', width: '100%' }}>
+        <div className="text-success mb-3" style={{ fontSize: '4rem' }}>✓</div>
+        <h3 className="fw-bold mb-3">תודה על הרכישה!</h3>
+        <p className="mb-4">ההזמנה שלך התקבלה בהצלחה ואנחנו מטפלים בה כעת.</p>
+        <button className="btn btn-dark w-100" onClick={() => navigate('/')}>
+          חזרה לעמוד הבית
+        </button>
+      </div>
+    </div>
   );
 };
 

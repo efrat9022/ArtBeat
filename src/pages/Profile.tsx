@@ -1,20 +1,25 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../redux/store';
 import {
-  Box, Button, TextField, Typography, Container
-} from '@mui/material';
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Container
+} from 'reactstrap';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../redux/store';
 import { updateProfile } from '../redux/slices/userSlice';
 import { setMessage } from '../redux/slices/messageSlice';
 import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
+  const user = useSelector((state: RootState) => state.user.currentUser);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector((state: RootState) => state.user.currentUser);
 
   const formik = useFormik({
     enableReinitialize: true,
@@ -40,71 +45,78 @@ const Profile = () => {
         await axios.put(`http://localhost:4000/users/${user.id}`, updatedUser);
         dispatch(updateProfile(updatedUser));
         dispatch(setMessage({ type: 'success', text: 'הפרטים עודכנו בהצלחה' }));
-
-        // הפנייה בהתאם לסוג המשתמש
-        if (updatedUser.isAdmin) {
-          navigate('/admin/add');
-        } else {
-          navigate('/');
-        }
+        navigate(user.isAdmin ? '/admin/add' : '/');
       } catch {
         dispatch(setMessage({ type: 'error', text: 'שגיאה בעדכון הפרטים' }));
       }
     }
   });
 
-  if (!user) {
-    return (
-      <Container maxWidth="sm" sx={{ mt: 5 }}>
-        <Typography variant="h6">יש להתחבר כדי לצפות בפרופיל</Typography>
-      </Container>
-    );
-  }
-
   return (
-    <Container maxWidth="sm" sx={{ mt: 5 }}>
-      <Typography variant="h5" gutterBottom>פרופיל אישי</Typography>
+    <div className="d-flex justify-content-center align-items-center bg-light" style={{ minHeight: '100vh' }}>
+      <div className="bg-white shadow p-4 rounded-4" style={{ width: '100%', maxWidth: '420px' }}>
+        <h4 className="text-center fw-bold mb-4">עריכת פרופיל </h4>
+        <Form onSubmit={formik.handleSubmit}>
+          <FormGroup>
+            <Label for="name">שם</Label>
+            <Input
+              type="text"
+              name="name"
+              id="name"
+              className="bg-light border-0"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              invalid={formik.touched.name && !!formik.errors.name}
+            />
+            {formik.touched.name && formik.errors.name && (
+              <div className="text-danger small">{formik.errors.name}</div>
+            )}
+          </FormGroup>
 
-      <form onSubmit={formik.handleSubmit}>
-        <TextField
-          fullWidth
-          label="שם"
-          name="name"
-          margin="normal"
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          error={formik.touched.name && !!formik.errors.name}
-          helperText={formik.touched.name && formik.errors.name}
-        />
+          <FormGroup>
+            <Label for="email">אימייל</Label>
+            <Input
+              type="email"
+              name="email"
+              id="email"
+              className="bg-light border-0"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              invalid={formik.touched.email && !!formik.errors.email}
+            />
+            {formik.touched.email && formik.errors.email && (
+              <div className="text-danger small">{formik.errors.email}</div>
+            )}
+          </FormGroup>
 
-        <TextField
-          fullWidth
-          label="אימייל"
-          name="email"
-          margin="normal"
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          error={formik.touched.email && !!formik.errors.email}
-          helperText={formik.touched.email && formik.errors.email}
-        />
+          <FormGroup>
+            <Label for="password">סיסמה חדשה</Label>
+            <Input
+              type="password"
+              name="password"
+              id="password"
+              className="bg-light border-0"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+            />
+            <small className="text-muted">השאר ריק אם לא מעוניינים לשנות סיסמה</small>
+          </FormGroup>
 
-        <TextField
-          fullWidth
-          label="סיסמה חדשה"
-          name="password"
-          type="password"
-          margin="normal"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-          helperText="השאר ריק אם לא רוצים לשנות סיסמה"
-        />
-
-        <Box sx={{ mt: 2 }}>
-          <Button type="submit" variant="contained">שמור שינויים</Button>
-        </Box>
-      </form>
-    </Container>
+          <Button
+            color="dark"
+            block
+            className="w-100 fw-bold mt-3"
+            type="submit"
+          >
+            שמור שינויים
+          </Button>
+        </Form>
+      </div>
+    </div>
   );
 };
 
 export default Profile;
+
+
+

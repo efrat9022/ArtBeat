@@ -125,6 +125,13 @@
       "password": "Kk12345!",
       "isAdmin": false,
       "id": "18"
+    },
+    {
+      "name": "אורי",
+      "email": "o@gmail.com",
+      "password": "Oo12345!",
+      "isAdmin": false,
+      "id": "ac6052Y"
     }
   ],
   "artworks": [
@@ -135,7 +142,7 @@
       "image": "https://www.galleryonline.co.il/uploaded_files/53c66c4a6a5d0bdc8f955e2fe718a6ad.jpeg",
       "price": 100,
       "category": "Painting",
-      "purchases": 1
+      "purchases": 2
     },
     {
       "title": "Artwork 2-m",
@@ -152,8 +159,7 @@
       "image": "https://img.joomcdn.net/dab7dc0948157c80d40ef5a0c18e410700fa6d37_original.jpeg",
       "price": 130,
       "category": "Screen Print",
-      "id": "4",
-      "purchases": 0
+      "id": "4"
     },
     {
       "id": "5",
@@ -216,7 +222,7 @@
       "image": "https://img.joomcdn.net/58d5534e7a4dab988e83623e860f4e8a3f20da3b_original.jpeg",
       "price": 200,
       "category": "Screen Print",
-      "purchases": 0
+      "purchases": 1
     },
     {
       "id": "12",
@@ -297,7 +303,7 @@
       "image": "https://metalart4home.co.il/wp-content/uploads/2022/11/Flower-Lilly-Black-d.png",
       "price": 290,
       "category": "Drawing",
-      "purchases": 9
+      "purchases": 11
     },
     {
       "id": "21",
@@ -306,7 +312,7 @@
       "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/169710/original/b9aafd33d09b3ca3fc2b879c954d449c.png",
       "price": 300,
       "category": "Photography",
-      "purchases": 1
+      "purchases": 3
     },
     {
       "id": "22",
@@ -423,7 +429,7 @@
       "image": "https://www.galleryonline.co.il/uploaded_files/7c89c8b3fd8e083030fa13af58c85bfb.jpg",
       "price": 430,
       "category": "Drawing",
-      "purchases": 3
+      "purchases": 4
     },
     {
       "id": "35",
@@ -552,6 +558,33 @@
       "comment": "SO NICE BUT NOT MATCH COLOR",
       "date": "2025-05-24",
       "id": "RZxBtfi"
+    },
+    {
+      "artworkId": 10,
+      "userId": "3",
+      "userName": "אפרת ווייס",
+      "rating": 5,
+      "comment": "מהמםםםםםםם",
+      "date": "2025-06-10",
+      "id": "G-8lnoE"
+    },
+    {
+      "artworkId": 11,
+      "userId": "3",
+      "userName": "אפרת ווייס",
+      "rating": 4,
+      "comment": "SO NICE!!!",
+      "date": "2025-06-10",
+      "id": "3JNcZhC"
+    },
+    {
+      "artworkId": 11,
+      "userId": "3",
+      "userName": "אפרת ווייס",
+      "rating": 2,
+      "comment": "good",
+      "date": "2025-06-10",
+      "id": "NIAyStb"
     }
   ],
   "orders": [
@@ -892,6 +925,72 @@
       "total": 400,
       "date": "2025-06-08T19:40:35.586Z",
       "id": "ABdIPBn"
+    },
+    {
+      "userId": "3",
+      "items": [
+        {
+          "id": "20",
+          "title": "Artwork 20",
+          "description": "Description for artwork 20",
+          "image": "https://metalart4home.co.il/wp-content/uploads/2022/11/Flower-Lilly-Black-d.png",
+          "price": 290,
+          "category": "Drawing",
+          "purchases": 9,
+          "quantity": 2
+        },
+        {
+          "id": "34",
+          "title": "Artwork 34",
+          "description": "Description for artwork 34",
+          "image": "https://www.galleryonline.co.il/uploaded_files/7c89c8b3fd8e083030fa13af58c85bfb.jpg",
+          "price": 430,
+          "category": "Drawing",
+          "purchases": 3,
+          "quantity": 1
+        },
+        {
+          "id": "21",
+          "title": "Artwork 21",
+          "description": "Description for artwork 21",
+          "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/169710/original/b9aafd33d09b3ca3fc2b879c954d449c.png",
+          "price": 300,
+          "category": "Photography",
+          "purchases": 1,
+          "quantity": 2
+        }
+      ],
+      "total": 1610,
+      "date": "2025-06-10T01:40:23.327Z",
+      "id": "sXtG-Ii"
+    },
+    {
+      "userId": "3",
+      "items": [
+        {
+          "id": "1",
+          "title": "Artwork 1",
+          "description": "Description for artwork 1",
+          "image": "https://www.galleryonline.co.il/uploaded_files/53c66c4a6a5d0bdc8f955e2fe718a6ad.jpeg",
+          "price": 100,
+          "category": "Painting",
+          "purchases": 1,
+          "quantity": 1
+        },
+        {
+          "id": "11",
+          "title": "Artwork 11",
+          "description": "Description for artwork 11",
+          "image": "https://img.joomcdn.net/58d5534e7a4dab988e83623e860f4e8a3f20da3b_original.jpeg",
+          "price": 200,
+          "category": "Screen Print",
+          "purchases": 0,
+          "quantity": 1
+        }
+      ],
+      "total": 300,
+      "date": "2025-06-10T01:41:39.947Z",
+      "id": "ybNOBRA"
     }
   ]
 }

@@ -1,25 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/store';
-import RemoveIcon from '@mui/icons-material/Remove';
-import DeleteIcon from '@mui/icons-material/Delete';
-import AddIcon from '@mui/icons-material/Add';
-import { useNavigate } from 'react-router-dom';
 import {
   removeFromCart,
   clearCart,
   decreaseQuantity,
   addToCart
 } from '../redux/slices/cartSlice';
-import {
-  Box,
-  Typography,
-  Card,
-  CardMedia,
-  CardContent,
-  IconButton,
-  Button
-} from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
@@ -30,89 +18,83 @@ const Cart = () => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <Box sx={{ p: 3 }}>
-      <Typography variant="h4" gutterBottom>הסל שלי</Typography>
+    <div className="container mt-5" dir="rtl">
+      <h2 className="mb-4 fw-bold mt-5 pt-5">הסל שלי</h2>
 
-      {cartItems.length === 0 ? (
-        <Typography>הסל ריק</Typography>
-      ) : (
-        <>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
-            {cartItems.map((item) => (
-              <Box key={item.id} sx={{ width: { xs: '100%', md: '48%' } }}>
-                <Card sx={{ display: 'flex', alignItems: 'center' }}>
-                  <CardMedia
-                    component="img"
-                    image={item.image}
-                    alt={item.title}
-                    sx={{
-                      width: 150,
-                      height: 150,
-                      objectFit: 'contain',
-                      backgroundColor: '#f0f0f0',
-                      borderRadius: 1
-                    }}
-                  />
-                  <CardContent sx={{ flex: 1 }}>
-                    <Typography variant="h6">{item.title}</Typography>
-                    <Typography>כמות: {item.quantity}</Typography>
-                    <Typography>מחיר ליחידה: ₪{item.price}</Typography>
-                    <Typography>סה"כ: ₪{item.price * item.quantity}</Typography>
+      <div className="row">
+        <div className="col-lg-9">
+          {cartItems.length === 0 ? (
+            <p>הסל שלך ריק</p>
+          ) : (
+            <>
+              {cartItems.map((item, index) => (
+                <div key={item.id}>
+                  <div className="d-flex justify-content-between align-items-center py-4">
+                    <div className="d-flex align-items-center gap-4">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        style={{ width: '120px', height: '120px', objectFit: 'contain' }}
+                      />
+                      <div>
+                        <h5 className="mb-2 fw-bold">{item.title}</h5>
+                        <p className="mb-1 text-muted" style={{ fontSize: '0.95rem' }}>
+                          תיאור לדוגמה של המוצר או מידע קצר נוסף.
+                        </p>
+                        <div style={{ fontSize: '0.95rem' }}>
+                          מחיר ליחידה: <strong>₪{item.price}</strong> <br />
+                          סה"כ: <strong>₪{item.price * item.quantity}</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="d-flex align-items-center gap-2">
+                      <button className="btn btn-outline-secondary btn-sm" onClick={() => dispatch(addToCart(item))}>+</button>
+                      <span className="fw-bold">{item.quantity}</span>
+                      <button className="btn btn-outline-secondary btn-sm" onClick={() => dispatch(decreaseQuantity(item.id))}>-</button>
+                      <button className="btn btn-outline-danger btn-sm" onClick={() => dispatch(removeFromCart(item.id))}>הסר</button>
+                    </div>
+                  </div>
+                  {index < cartItems.length - 1 && <hr className="my-0" />} 
+                </div>
+              ))}
+            </>
+          )}
+        </div>
 
-                    <Box sx={{ display: 'flex', gap: 1, mt: 1 }}>
-                      <IconButton
-                        color="primary"
-                        onClick={() => dispatch(decreaseQuantity(item.id))}
-                      >
-                        <RemoveIcon />
-                      </IconButton>
+        <div className="col-lg-3 mt-4 mt-lg-0">
+          <div className="border rounded shadow-sm p-3 mb-3">
+            <h5 className="fw-bold mb-3">סיכום הזמנה</h5>
+            <div className="mb-2">סה"כ מוצרים: <strong>{totalItems}</strong></div>
+            <div className="mb-3">לתשלום: <strong>₪{total}</strong></div>
 
-                      <IconButton
-                        color="success"
-                        onClick={() => dispatch(addToCart(item))}
-                      >
-                        <AddIcon />
-                      </IconButton>
-
-                      <IconButton
-                        color="error"
-                        onClick={() => dispatch(removeFromCart(item.id))}
-                      >
-                        <DeleteIcon />
-                      </IconButton>
-                    </Box>
-                  </CardContent>
-                </Card>
-              </Box>
-            ))}
-          </Box>
-
-          <Typography variant="h6" sx={{ mt: 4 }}>
-            סה"כ לתשלום: ₪{total}
-          </Typography>
-
-          <Box sx={{ mt: 2, display: 'flex', gap: 2 }}>
-            <Button
-              variant="contained"
-              color="secondary"
+            <button
+              className="btn btn-dark w-100 mb-2"
+              onClick={() => navigate('/checkout')}
+            >
+              המשך לתשלום
+            </button>
+            <button
+              className="btn btn-outline-secondary w-100"
               onClick={() => dispatch(clearCart())}
             >
               נקה סל
-            </Button>
-
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => navigate('/checkout')}
-            >
-              לתשלום
-            </Button>
-          </Box>
-        </>
-      )}
-    </Box>
+            </button>
+          </div>
+          <div className="border rounded shadow-sm p-3 text-center">
+            <p className="fw-bold mb-1" style={{ fontSize: '0.95rem' }}>
+              לקבל משלוח חינם ומהיר יותר<br />
+              עם ניסיון בחינם למשך 6 חודשים
+            </p>
+            <img src="/prime.png" alt="Prime" style={{ height: '28px', marginBottom: '10px' }} />
+            <br />
+            <button className="btn btn-outline-dark btn-sm">Try Prime</button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
